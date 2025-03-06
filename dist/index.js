@@ -69,8 +69,8 @@ function findTodosUsingUserid(userid) {
         console.log(res);
     });
 }
-// insertUserData("bharat007" , "123" , "bharat" , "sharma");
+// insertUserData("kisan02" , "123" , "kisan" , "sharma");
 // findUserUsingUserName("bharat00")
 // updateingFirstName("bharat007" , "anusri")
-// inserTodos("going to school " , "need to learning more coding" , 1)
-findTodosUsingUserid(1);
+// inserTodos("going to school " , "need to learning more coding" , 2)
+findTodosUsingUserid(2);
