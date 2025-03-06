@@ -59,7 +59,18 @@ function inserTodos(title, description, user_id) {
         console.log(res);
     });
 }
+function findTodosUsingUserid(userid) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const res = yield prisma.todo.findMany({
+            where: {
+                user_id: userid
+            }
+        });
+        console.log(res);
+    });
+}
 // insertUserData("bharat007" , "123" , "bharat" , "sharma");
 // findUserUsingUserName("bharat00")
 // updateingFirstName("bharat007" , "anusri")
-inserTodos("going to gym", "need to do hard work", 1);
+// inserTodos("going to school " , "need to learning more coding" , 1)
+findTodosUsingUserid(1);
