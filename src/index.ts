@@ -31,7 +31,17 @@ async function updateingFirstName(username : string , updateFirstName : string) 
     })
     console.log(res);
 }
+async function inserTodos(title : string , description : string , user_id : number) { 
+    const res = await prisma.todo.create({
+        data : {
+            title : title,
+            description : description,
+            user_id : user_id
+        }
+    })
+    console.log(res) ;
+}
 // insertUserData("bharat007" , "123" , "bharat" , "sharma");
 // findUserUsingUserName("bharat00")
-updateingFirstName("bharat007" , "anusri")
-
+// updateingFirstName("bharat007" , "anusri")
+inserTodos("going to gym" , "need to do hard work" , 1)

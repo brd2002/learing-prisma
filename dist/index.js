@@ -47,6 +47,19 @@ function updateingFirstName(username, updateFirstName) {
         console.log(res);
     });
 }
+function inserTodos(title, description, user_id) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const res = yield prisma.todo.create({
+            data: {
+                title: title,
+                description: description,
+                user_id: user_id
+            }
+        });
+        console.log(res);
+    });
+}
 // insertUserData("bharat007" , "123" , "bharat" , "sharma");
 // findUserUsingUserName("bharat00")
-updateingFirstName("bharat007", "anusri");
+// updateingFirstName("bharat007" , "anusri")
+inserTodos("going to gym", "need to do hard work", 1);
